@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update]
 
   def index
     @events = Event.all
@@ -33,17 +33,13 @@ class EventsController < ApplicationController
     end
   end
 
-  def destroy
-    @event.destroy
-    redirect_to events_url, notice: 'Event was successfully destroyed.'
-  end
-
   private
     def set_event
       @event = Event.find(params[:id])
     end
 
     def event_params
+      params.require(:event).permit(:title, :address, :datetime, :description)
       params.require(:event).permit(:title, :address, :datetime, :description)
     end
 end
