@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'devise'
 gem 'rails', '~> 5.2.3'
 gem 'puma', '~> 3.11'
 gem 'uglifier', '>= 1.3.0'
