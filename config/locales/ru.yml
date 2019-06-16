@@ -16,7 +16,7 @@ ru:
         description: 'Описание'
   controllers:
     events:
-    created: 'Успех! Событие создано.'
+      created: 'Успех! Событие создано.'
       updated: 'Вы успешно обновили событие.'
       destroyed: 'Мероприятие отменено.'
     users:
