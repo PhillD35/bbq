@@ -7,6 +7,7 @@ gem 'rails', '~> 5.2.3'
 
 gem 'devise'
 gem 'devise-i18n'
+gem 'devise-bootstrap-views'
 gem 'russian'
 
 gem 'puma', '~> 3.11'
