@@ -2,6 +2,8 @@
 
 <% if errors.any? %>
   <div class="alert alert-danger">
+
+    <h4><%= I18n.t('error', count: errors.count) %></h4>
     <ul>
       <% errors.full_messages.each do |message| %>
         <li><%= message %></li>

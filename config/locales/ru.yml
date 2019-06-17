@@ -24,3 +24,7 @@ ru:
   app:
     name: 'Шашлыки'
     company: 'Хороший программист'
+  error:
+    one: 'У вас %{count} ошибка:'
+    few: 'У вас %{count} ошибки:'
+    many: 'У вас %{count} ошибок:'

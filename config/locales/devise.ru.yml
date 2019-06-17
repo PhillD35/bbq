@@ -61,7 +61,7 @@ ru:
       not_found: "не найдена"
       not_locked: "не заблокирована"
       not_saved:
-        one: "У вас %{count} ошибка"
-        few: "У вас %{count} ошибок"
-        many: "У вас %{count} ошибок"
-other: "У вас %{count} ошибки"
+        one: "У вас %{count} ошибка:"
+        few: "У вас %{count} ошибки:"
+        many: "У вас %{count} ошибок:"
+other: "У вас %{count} ошибки:"
