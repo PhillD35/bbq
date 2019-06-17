@@ -19,8 +19,17 @@
           <p><%= @event.description %></p>
 
           <% if current_user_can_edit?(@event) %>
-            <div class="buffer-both">
-              <%= link_to 'Изменить', edit_event_path(@event), class: 'btn btn-primary' %>
+            <div class="row">
+              <div class="buffer-both col-sm-3">
+                <%= link_to 'Изменить', edit_event_path(@event), class: 'btn btn-primary' %>
+              </div>
+
+              <div class="buffer-both col-sm-3">
+                <%= link_to 'Удалить', event_path(@event),
+                 method: :delete, data: {confirm: t('confirm.delete')},
+                 class: 'btn btn-danger'
+                %>
+              </div>
             </div>
           <% end %>
         </div>

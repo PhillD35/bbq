@@ -24,3 +24,9 @@ en:
   app:
     name: 'BBQ'
     company: 'Good programmer'
+  error:
+    one: 'You have %{count} error:'
+    few: 'You have %{count} errors:'
+    many: 'You have %{count} errors:'
+  confirm:
+    delete: 'Are you sure?'

@@ -15,6 +15,12 @@ class EventsController < ApplicationController
     @event = current_user.events.build
   end
 
+  def destroy
+    @event.destroy
+
+    redirect_to root_path, notice: I18n.t('controllers.events.destroyed')
+  end
+
   def edit
   end
 
@@ -47,7 +53,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :address, :datetime, :description)
     params.require(:event).permit(:title, :address, :datetime, :description)
   end
 end

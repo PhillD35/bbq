@@ -28,3 +28,5 @@ ru:
     one: 'У вас %{count} ошибка:'
     few: 'У вас %{count} ошибки:'
     many: 'У вас %{count} ошибок:'
+  confirm:
+    delete: 'Точно удалить?'
