@@ -3,6 +3,8 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      comment: 'Коментарий'
+      subscriptions: 'Подписка'
     attributes:
       user:
         email: 'Email'
@@ -14,6 +16,12 @@ ru:
         address: 'Место'
         datetime: 'Дата и время'
         description: 'Описание'
+      comment:
+        body: 'Текст'
+        user_name: 'Ваше имя'
+      subscription:
+        user_name: 'Имя'
+        user_email: 'Email'
   controllers:
     events:
       created: 'Успех! Событие создано.'
@@ -24,6 +32,10 @@ ru:
     comments:
       created: 'Комментарий добавлен'
       destroyed: 'Вы удалили коментарий'
+      error: 'Ошибка:'
+    subscriptions:
+      created: 'Вы подписались на %{name}'
+      destroyed: 'Подписка на %{name} отменена'
       error: 'Ошибка:'
   app:
     name: 'Шашлыки'

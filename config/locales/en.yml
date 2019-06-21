@@ -3,6 +3,8 @@ en:
     models:
       user: 'User'
       event: 'Event'
+      comment: 'Comment'
+      subscriptions: 'Subscription'
     attributes:
       user:
         email: 'Email'
@@ -14,6 +16,12 @@ en:
         address: 'Address'
         datetime: 'Datetime'
         description: 'Description'
+      comment:
+        body: 'Text'
+        user_name: 'Name'
+      subscription:
+        user_name: 'Name'
+        user_email: 'Email'
   controllers:
     events:
       created: 'Event created.'
@@ -21,6 +29,14 @@ en:
       destroyed: 'Event destroyed.'
     users:
       updated: 'User updated'
+    comments:
+      created: 'Comment added'
+      destroyed: 'Comment removed'
+      error: 'Error:'
+    subscriptions:
+      created: '%{name}: subscription added'
+      destroyed: '%{name}: subscription removed'
+      error: 'Error:'
   app:
     name: 'BBQ'
     company: 'Good programmer'

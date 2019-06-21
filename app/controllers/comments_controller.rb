@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @new_comment = @event.comments.build(comment_params)
     @new_comment.user = current_user
 
-    if @comment.save
+    if @new_comment.save
       redirect_to @event, notice: I18n.t('controllers.comments.created')
     else
       render 'events/show', alert: I18n.t('controllers.comments.error')
@@ -17,17 +17,17 @@ class CommentsController < ApplicationController
     message = {notice: I18n.t('controllers.comments.destroyed')}
 
     if current_user_can_edit?(@comment)
-      @coment.destroy
+      @comment.destroy!
     else
       message = {alert: I18n.t('controllers.comments.error')}
     end
+
     redirect_to @event, message
   end
 
   private
-
   def set_event
-    @@event = Event.find(params[:event_id])
+    @event = Event.find(params[:event_id])
   end
 
   def set_comment
