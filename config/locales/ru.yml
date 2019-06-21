@@ -1,3 +1,4 @@
+
 ru:
   activerecord:
     models:
@@ -36,6 +37,7 @@ ru:
     subscriptions:
       created: 'Вы подписались на %{name}'
       destroyed: 'Подписка на %{name} отменена'
+      your_event_error: 'Вы не можете подписаться на своё событие!'
       error: 'Ошибка:'
   app:
     name: 'Шашлыки'
@@ -45,4 +47,4 @@ ru:
     few: 'У вас %{count} ошибки:'
     many: 'У вас %{count} ошибок:'
   confirm:
-    delete: 'Точно удалить?'
+delete: 'Точно удалить?'

@@ -1,5 +1,6 @@
 class SubscriptionsController < ApplicationController
   before_action :set_event, only: [:create, :destroy]
+  before_action :your_event?, only: [:create]
   before_action :set_subscription, only: [:destroy]
 
 
@@ -37,5 +38,9 @@ class SubscriptionsController < ApplicationController
 
   def subscription_params
     params.fetch(:subscription, {}).permit(:user_email, :user_name)
+  end
+
+  def your_event?
+    redirect_to @event, alert: I18n.t('controllers.subscriptions.your_event_error') if current_user == @event.user
   end
 end
