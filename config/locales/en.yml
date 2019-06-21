@@ -37,6 +37,7 @@ en:
       created: '%{name}: subscription added'
       destroyed: '%{name}: subscription removed'
       your_event_error: "You can't subscribe to you own event!"
+      email_taken_error: 'Email already taken'
       error: 'Error:'
   app:
     name: 'BBQ'
@@ -46,4 +47,4 @@ en:
     few: 'You have %{count} errors:'
     many: 'You have %{count} errors:'
   confirm:
-delete: 'Are you sure?'
+    delete: 'Are you sure?'
