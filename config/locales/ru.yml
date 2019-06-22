@@ -21,6 +21,7 @@ ru:
         body: 'Текст'
         user_name: 'Ваше имя'
       subscription:
+        user_id: 'Пользователь'
         user_name: 'Имя'
         user_email: 'Email'
   controllers:
@@ -37,8 +38,8 @@ ru:
     subscriptions:
       created: 'Вы подписались на %{name}'
       destroyed: 'Подписка на %{name} отменена'
-      your_event_error: 'Вы не можете подписаться на своё событие!'
-      email_taken_error: 'Email занят зарегестрированным пользователем'
+      your_event_error: ', нельзя подписываться на свои мероприятия!'
+      email_taken_error: 'используется зарегестрированным пользователем'
       error: 'Ошибка:'
   app:
     name: 'Шашлыки'

@@ -8,6 +8,11 @@ class Subscription < ApplicationRecord
   validates :user, uniqueness: {scope: :event_id}, if: :user_present?
   validates :user_email, uniqueness: {scope: :event_id}, unless: :user_present?
 
+  validate :your_event
+  validate :ensure_uniq_email, unless: :user_present?
+
+  before_validation :email_downcase, unless: :user_present?
+
   def user_present?
     user.present?
   end
@@ -25,6 +30,24 @@ class Subscription < ApplicationRecord
       user.email
     else
       super
+    end
+  end
+
+  private
+
+  def email_downcase
+    user_email.downcase! if user_email.present?
+  end
+
+  def your_event
+    if user == event.user
+      errors.add(:user_id, I18n.t('controllers.subscriptions.your_event_error'))
+    end
+  end
+
+  def ensure_uniq_email
+    unless User.where(email: self.user_email).empty?
+      errors.add(:user_email, I18n.t('controllers.subscriptions.email_taken_error'))
     end
   end
 end

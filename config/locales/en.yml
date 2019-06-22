@@ -20,6 +20,7 @@ en:
         body: 'Text'
         user_name: 'Name'
       subscription:
+        user_id: 'User'
         user_name: 'Name'
         user_email: 'Email'
   controllers:
@@ -36,8 +37,8 @@ en:
     subscriptions:
       created: '%{name}: subscription added'
       destroyed: '%{name}: subscription removed'
-      your_event_error: "You can't subscribe to you own event!"
-      email_taken_error: 'Email already taken'
+      your_event_error: ', unable to subscribe to you own event!'
+      email_taken_error: 'already taken'
       error: 'Error:'
   app:
     name: 'BBQ'
