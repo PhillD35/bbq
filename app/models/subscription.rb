@@ -41,13 +41,13 @@ class Subscription < ApplicationRecord
 
   def your_event
     if user == event.user
-      errors.add(:user_id, I18n.t('controllers.subscriptions.your_event_error'))
+      errors.add(:user_id, :owned)
     end
   end
 
   def ensure_uniq_email
     unless User.where(email: self.user_email).empty?
-      errors.add(:user_email, I18n.t('controllers.subscriptions.email_taken_error'))
+      errors.add(:user_email, :taken)
     end
   end
 end

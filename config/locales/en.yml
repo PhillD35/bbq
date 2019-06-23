@@ -3,12 +3,14 @@ en:
     models:
       user: 'User'
       event: 'Event'
+      photo: 'Photo'
       comment: 'Comment'
       subscriptions: 'Subscription'
     attributes:
       user:
         email: 'Email'
         name: 'Name'
+        Avatar: 'Avatar'
         password: 'Password'
         password_confirmation: 'Password confirmation'
       event:
@@ -16,6 +18,8 @@ en:
         address: 'Address'
         datetime: 'Datetime'
         description: 'Description'
+      photo:
+        photo: 'Photo'
       comment:
         body: 'Text'
         user_name: 'Name'
@@ -23,6 +27,14 @@ en:
         user_id: 'User'
         user_name: 'Name'
         user_email: 'Email'
+      errors:
+        models:
+          subscription:
+            attributes:
+              user_id:
+                owned: ', unable to subscribe to you own event!'
+              user_email:
+                taken: 'already taken'
   controllers:
     events:
       created: 'Event created.'
@@ -30,6 +42,10 @@ en:
       destroyed: 'Event destroyed.'
     users:
       updated: 'User updated'
+    photos:
+      created: 'Photo added'
+      destroyed: 'You removed photo'
+      error: 'Error:'
     comments:
       created: 'Comment added'
       destroyed: 'Comment removed'
@@ -37,8 +53,6 @@ en:
     subscriptions:
       created: '%{name}: subscription added'
       destroyed: '%{name}: subscription removed'
-      your_event_error: ', unable to subscribe to you own event!'
-      email_taken_error: 'already taken'
       error: 'Error:'
   app:
     name: 'BBQ'

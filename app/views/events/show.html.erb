@@ -2,7 +2,8 @@
   <div class="event-info row">
     <div class="col-md-12">
       <%= content_tag 'div', '', class: 'event-background',
-        style: "background-image: url(#{asset_path('event.jpg')})" %>
+        style: "background-image: url(#{event_photo(@event)})"
+      %>
 
       <div class="event-info-inner row">
         <div class="col-md-6">
@@ -22,6 +23,20 @@
                 class: 'btn btn-primary' %>
             </div>
           <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="event-photos">
+        <div class="event-photos-galley">
+          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+        </div>
+
+        <div class="event-photo-form">
+          <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
         </div>
       </div>
     </div>

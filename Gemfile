@@ -5,10 +5,14 @@ ruby '2.5.1'
 
 gem 'rails', '~> 5.2.3'
 
-gem 'rails-i18n'
 gem 'devise'
-gem 'devise-i18n'
 gem 'devise-bootstrap-views'
+
+gem 'rails-i18n'
+gem 'devise-i18n'
+
+gem 'carrierwave'
+gem 'rmagick'
 
 gem 'puma', '~> 3.11'
 gem 'uglifier', '>= 1.3.0'

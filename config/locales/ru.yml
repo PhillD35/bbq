@@ -4,12 +4,14 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      photo: 'Фото'
       comment: 'Коментарий'
       subscriptions: 'Подписка'
     attributes:
       user:
         email: 'Email'
         name: 'Имя'
+        avatar: 'Аватарка'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
@@ -17,6 +19,8 @@ ru:
         address: 'Место'
         datetime: 'Дата и время'
         description: 'Описание'
+      photo:
+        photo: 'Фото'
       comment:
         body: 'Текст'
         user_name: 'Ваше имя'
@@ -24,6 +28,14 @@ ru:
         user_id: 'Пользователь'
         user_name: 'Имя'
         user_email: 'Email'
+      errors:
+        models:
+          subscription:
+            attributes:
+              user_id:
+                owned: ', нельзя подписываться на свои мероприятия!'
+              user_email:
+                taken: 'используется зарегестрированным пользователем'
   controllers:
     events:
       created: 'Успех! Событие создано.'
@@ -31,6 +43,10 @@ ru:
       destroyed: 'Мероприятие отменено.'
     users:
       updated: 'Данные профиля обновлены.'
+    photos:
+      created: 'Фото добавленно'
+      destroyed: 'Вы удалили фото'
+      error: 'Ошибка:'
     comments:
       created: 'Комментарий добавлен'
       destroyed: 'Вы удалили коментарий'
@@ -38,8 +54,6 @@ ru:
     subscriptions:
       created: 'Вы подписались на %{name}'
       destroyed: 'Подписка на %{name} отменена'
-      your_event_error: ', нельзя подписываться на свои мероприятия!'
-      email_taken_error: 'используется зарегестрированным пользователем'
       error: 'Ошибка:'
   app:
     name: 'Шашлыки'
