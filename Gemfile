@@ -13,6 +13,7 @@ gem 'devise-i18n'
 
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog-aws'
 
 gem 'puma', '~> 3.11'
 gem 'uglifier', '>= 1.3.0'
