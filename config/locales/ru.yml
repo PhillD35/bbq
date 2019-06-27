@@ -1,4 +1,3 @@
-
 ru:
   activerecord:
     models:
@@ -64,3 +63,18 @@ ru:
     many: 'У вас %{count} ошибок:'
   confirm:
     delete: 'Точно удалить?'
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
