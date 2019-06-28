@@ -22,11 +22,11 @@ class User < ApplicationRecord
   end
 
   def link_subscriptions
-    subscription = Subscription.find_by(user_id: nil, user_email: self.email)
+    subscriptions = Subscription.where(user_id: nil, user_email: self.email)
 
-    unless subscription.nil?
-      self.update(name: subscription.user_name)
-      subscription.update(user_id: self.id)
+    unless subscriptions.empty?
+      self.update(name: subscriptions.last.user_name)
+      subscriptions.update_all(user_id: self.id)
     end
   end
 end
