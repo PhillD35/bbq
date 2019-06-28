@@ -63,3 +63,25 @@ en:
     many: 'You have %{count} errors:'
   confirm:
     delete: 'Are you sure?'
+  event_mailer:
+    comment:
+      title: 'New comment'
+      author: 'Author'
+      event: 'Event'
+      datetime: 'Datetime'
+      owner: 'Owner'
+    photo:
+      title: 'New photo'
+      author: 'Author'
+      event: 'Event'
+      datetime: 'Datetime'
+      owner: 'Owner'
+      text: 'New photo has been added to event.'
+    subscription:
+      title: 'New subscription'
+      name: 'Name'
+      email: 'Email'
+      author: 'Author'
+      event: 'Event'
+      datetime: 'Datetime'
+      owner: 'Owner'
