@@ -18,6 +18,7 @@ en:
         address: 'Address'
         datetime: 'Datetime'
         description: 'Description'
+        pincode: 'PIN'
       photo:
         photo: 'Photo'
       comment:
@@ -40,6 +41,7 @@ en:
       created: 'Event created.'
       updated: 'Event updated.'
       destroyed: 'Event destroyed.'
+      wrong_pincode: 'Wrong PIN'
     users:
       updated: 'User updated'
     photos:
@@ -54,6 +56,11 @@ en:
       created: '%{name}: subscription added'
       destroyed: '%{name}: subscription removed'
       error: 'Error:'
+    buttons:
+      post: 'Отправить'
+      save: 'Сохранить'
+      upload: 'Загрузить'
+      subscribe: 'Подписаться'
   app:
     name: 'BBQ'
     company: 'Good programmer'

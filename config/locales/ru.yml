@@ -18,6 +18,7 @@ ru:
         address: 'Место'
         datetime: 'Дата и время'
         description: 'Описание'
+        pincode: 'Код доступа'
       photo:
         photo: 'Фото'
       comment:
@@ -40,6 +41,7 @@ ru:
       created: 'Успех! Событие создано.'
       updated: 'Вы успешно обновили событие.'
       destroyed: 'Мероприятие отменено.'
+      wrong_pincode: 'Неверный пинкод!'
     users:
       updated: 'Данные профиля обновлены.'
     photos:
@@ -54,6 +56,11 @@ ru:
       created: 'Вы подписались на %{name}'
       destroyed: 'Подписка на %{name} отменена'
       error: 'Ошибка:'
+  buttons:
+    post: 'Отправить'
+    save: 'Сохранить'
+    upload: 'Загрузить'
+    subscribe: 'Подписаться'
   app:
     name: 'Шашлыки'
     company: 'Хороший программист'
