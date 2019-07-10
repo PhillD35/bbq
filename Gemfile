@@ -19,6 +19,7 @@ gem 'puma', '~> 3.11'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'twitter-bootstrap-rails'
+gem 'jquery-rails'
 
 group :production do
   gem 'pg'
