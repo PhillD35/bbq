@@ -6,26 +6,29 @@
       %>
 
       <div class="event-info-inner row">
-        <div class="col-md-6">
+        <div class="col-md-7">
           <div class="event-description">
             <h1><%= @event.title %></h1>
             <h3><%= l @event.datetime, format: :short %></h3>
-            <h3>
-              <small><%= link_to @event.address,
-                "https://yandex.ru/maps/?text=#{@event.address}" %></small>
-            </h3>
+            <h4><%= link_to @event.address, "https://yandex.ru/maps/?text=#{@event.address}", target: :blank %></h4>
             <p><%= @event.description %></p>
           </div>
 
           <% if current_user_can_edit?(@event) %>
-            <div class="buffer-both">
-            <%= link_to 'Изменить', edit_event_path(@event),
-                class: 'btn btn-primary' %>
+            <div class="row buffer-both">
+
+              <div class="col-md-12">
+                <div>
+                  <%= link_to 'Изменить', edit_event_path(@event), class: 'btn btn-primary' %>
+                </div>
+              </div>
+
             </div>
           <% end %>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-5">
+          <h4 class="buffer-top">Место на карте:</h4>
           <%= content_tag 'div', '', id: 'map', data: {address: @event.address}, class: 'event-map' %>
         </div>
       </div>

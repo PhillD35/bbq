@@ -1,4 +1,6 @@
 module ApplicationHelper
+  ADDRESS_MAX_LENGTH = 28
+
   def user_avatar(user)
     if user.avatar?
       user.avatar.url
@@ -37,5 +39,21 @@ module ApplicationHelper
 
   def fa_icon(icon_class)
     content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
+
+  def shrink_address(address)
+    if address.length > ADDRESS_MAX_LENGTH
+      adjust_address(address[0..24].strip) + '...'
+    else
+      address
+    end
+  end
+
+  def adjust_address(address)
+    if address.last == ','
+      address.chop
+    else
+      address
+    end
   end
 end
