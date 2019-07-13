@@ -56,3 +56,8 @@
   opacity: 1;
   transition: 0.8s;
 }
+
+.event-photo {
+  box-sizing: border-box;
+  height: 130px;
+}

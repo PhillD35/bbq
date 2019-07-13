@@ -27,6 +27,19 @@
   margin-top: 20px;
 }
 
+.buffer-top-small {
+  margin-top: 10px;
+}
+
+.buffer-bottom-small {
+  margin-bottom: 10px;
+}
+
+.buffer-both-small {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 .img-icon, .img-icon-small {
   height: 50px;
   width: auto;
