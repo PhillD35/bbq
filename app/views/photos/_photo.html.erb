@@ -1,6 +1,10 @@
+<% image_title = "Добавил #{render partial: 'users/user', object: photo.user}" %>
+
 <div class="event-photo buffer-both-small col-sm-4 col-md-3 text-center">
   <div>
-    <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+    <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
+      toggle: 'lightbox', title: image_title, gallery: 'event-photos'
+    } %>
   </div>
   <div class="bold buffer-top-small">
     <%= render partial: 'users/user', object: photo.user %>
