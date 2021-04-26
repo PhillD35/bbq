@@ -11,5 +11,7 @@ import '../styles/application'
 
 import 'bootstrap/dist/js/bootstrap.js'
 
+const images = require.context('../images', true)
+
 Rails.start()
 ActiveStorage.start()
