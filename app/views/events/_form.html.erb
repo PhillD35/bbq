@@ -1,28 +1,28 @@
-<%= form_for(@event) do |f| %>
+<%= form_for(@event) do |field| %>
   <%= render partial: 'partials/form_errors', locals: {model: @event} %>
 
-  <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
+  <div class="form-group my-4">
+    <%= field.label :title, class: 'h6' %>
+    <%= field.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :address %>
-    <%= f.text_field :address, class: 'form-control' %>
+  <div class="form-group my-4">
+    <%= field.label :address, class: 'h6' %>
+    <%= field.text_field :address, class: 'form-control' %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :datetime %>
-    <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
+  <div class="form-group my-4">
+    <%= field.label :datetime, class: 'h6' %>
+    <p><%= field.datetime_select :datetime, class: 'form-control' %></p>
   </div>
 
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: 'form-control' %>
+  <div class="form-group my-4">
+    <%= field.label :description, class: 'h6' %>
+    <%= field.text_area :description, class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-    или <%= link_to 'вернуться', :back %>
+  <div class="actions d-flex justify-content-between align-items-baseline">
+    <%= field.submit 'Сохранить', class: 'btn btn-success' %>
+    <%= link_to 'Вернуться', :back, class: 'btn btn-outline-dark btn-sm'%>
   </div>
 <% end %>
