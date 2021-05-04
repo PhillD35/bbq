@@ -18,9 +18,14 @@
 
       <nav class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item"><%= link_to User.first.name, user_path(User.first), class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Link2", "/path2", class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Link3", "/path3", class: "nav-link" %></li>
+          <% if user_signed_in? %>
+            <li class="nav-item"><%= link_to current_user.name, current_user, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "Выйти", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
+          <% else %>
+            <li class="nav-item"><%= link_to "Войти", new_user_session_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "Регистрация", new_user_registration_path, class: "nav-link" %></li>
+          <% end %>
+
         </ul>
       </nav>
     </nav>
@@ -28,23 +33,10 @@
 
 
   <div class="row my-2">
-    <div class="col-lg-9">
+    <div class="col-lg-12">
+      <%= bootstrap_flash %>
       <%= yield %>
     </div>
-
-    <div class="col-lg-3 bg-light py-2">
-      <h3 class="text-center">Sidebar</h3>
-      <nav class="mt-3">
-        <ul class="nav navbar-nav flex-column">
-          <li class="nav-item"><%= link_to "Google", "https://google.com",
-            class: "nav-link text-secondary text-center border-top", target: "_blank" %></li>
-          <li class="nav-item"><%= link_to "Yandex", "https://yandex.ru",
-            class: "nav-link text-secondary text-center border-top", target: "_blank" %></li>
-          <li class="nav-item"><%= link_to "Yahoo", "https://yahoo.com",
-            class: "nav-link text-secondary text-center border-top", target: "_blank" %></li>
-        </ul>
-      </nav>
-    </div><!--/span-->
   </div><!--/row-->
 
   <footer class="mt-auto py-3">
