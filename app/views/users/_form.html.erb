@@ -1,18 +1,19 @@
 <%= form_for @user, html: {multipart: true} do |field| %>
   <%= render partial: 'partials/form_errors', locals: {model: @user} %>
 
-  <div class="form-group my-4">
-    <%= field.label :name, class: 'h6' %>
+  <div class="form-group my-3">
+    <%= field.label :name, 'Имя', class: 'h6' %>
     <%= field.text_field :name, class: 'form-control' %>
   </div>
 
-  <div class="form-group my-4">
-    <%= field.label :email, class: 'h6' %>
+  <div class="form-group my-3">
+    <%= field.label :email, 'Электронная почта', class: 'h6' %>
     <%= field.text_field :email, class: 'form-control' %>
   </div>
 
   <div class="actions d-flex justify-content-between align-items-baseline">
     <%= field.submit 'Сохранить', class: 'btn btn-success' %>
+    <%= link_to 'Больше настроек', edit_user_registration_path, class: 'btn btn-sm btn-outline-info' %>
     <%= link_to 'Вернуться', :back, class: 'btn btn-outline-dark btn-sm'%>
   </div>
 <% end %>

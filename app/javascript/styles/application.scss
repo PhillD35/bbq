@@ -2,33 +2,3 @@
 
 @import 'miscellaneous';
 @import 'events';
-
-.bg-colored:before {
-    right: -999em;
-    background: #f8f9fa;
-    content: '';
-    display: block;
-    position: absolute;
-    width: 999em;
-    top: 0;
-    bottom: 0;
-
-  border-bottom-color: #dee2e6;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-}
-
-.bg-colored:after {
-    left: -999em;
-    background: #f8f9fa;
-    content: '';
-    display: block;
-    position: absolute;
-    width: 999em;
-    top: 0;
-    bottom: 0;
-
-    border-bottom-color: #dee2e6;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-}
