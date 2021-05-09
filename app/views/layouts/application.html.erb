@@ -15,7 +15,7 @@
     <nav class="container">
       <nav class="row w-100">
 
-        <%= link_to "BBQ!", root_path, class: 'navbar-brand' %>
+        <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
 
         <nav class="collapse navbar-collapse">
           <ul class="navbar-nav w-100 d-flex justify-content-end">
@@ -44,7 +44,7 @@
   </div><!--/row-->
 
   <footer class="container mt-auto py-3">
-    <p>&copy; Company 2016</p>
+    <p>&copy; <%= t('app.company') %></p>
   </footer>
 </body>
 </html>

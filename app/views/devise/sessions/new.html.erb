@@ -4,12 +4,12 @@
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group my-3">
-        <%= f.label :email, 'Электронная почта', class: 'h6' %>
+        <%= f.label :email, class: 'h6' %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
       </div>
 
       <div class="form-group my-3">
-        <%= f.label :password, 'Пароль', class: 'h6' %>
+        <%= f.label :password, class: 'h6' %>
         <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
       </div>
 

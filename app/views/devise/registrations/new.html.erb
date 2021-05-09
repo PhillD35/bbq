@@ -5,17 +5,17 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="form-group my-3">
-        <%= f.label :email, 'Электронная почта', class: 'h6' %>
+        <%= f.label :email, class: 'h6' %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
       </div>
 
       <div class="form-group my-3">
-        <%= f.label :name, 'Имя', class: 'h6' %>
+        <%= f.label :name, class: 'h6' %>
         <%= f.text_field :name, class: 'form-control' %>
       </div>
 
       <div class="form-group my-3">
-        <%= f.label :password, 'Пароль', class: 'h6' %>
+        <%= f.label :password, class: 'h6' %>
         <% if @minimum_password_length %>
           <em class="text-secondary">(<%= @minimum_password_length %> символа минимум)</em>
         <% end %>
@@ -23,7 +23,7 @@
       </div>
 
       <div class="form-group my-3">
-        <%= f.label :password_confirmation, 'Подтверждение пароля', class: 'h6' %>
+        <%= f.label :password_confirmation, class: 'h6' %>
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
       </div>
 

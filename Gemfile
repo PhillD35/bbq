@@ -8,6 +8,8 @@ gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
 gem 'devise'
+gem 'devise-i18n'
+gem 'russian'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
