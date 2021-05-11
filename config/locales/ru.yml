@@ -22,6 +22,11 @@ ru:
     users:
       create: Успех! Пользователь создан.
       update: Успех! Профиль обновлён.
+  errors:
+    one: "%{count} ошибка"
+    few: "%{count} ошибки"
+    many: "%{count} ошибок"
+    other: "%{count} ошибок"
   app:
     name: Шашлыки
     company: Рога и копыта
