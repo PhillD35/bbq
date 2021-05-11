@@ -14,10 +14,13 @@
             <p><%= @event.description %></p>
           </div>
 
-          <div class="mt-2 mb-3">
+          <div class="mt-2 mb-3 d-flex align-items-baseline">
             <% if current_user_can_edit?(@event) %>
               <%= link_to 'Изменить', edit_event_path(@event),
                 class: 'btn btn-primary' %>
+
+              <%= link_to 'Удалить', event_path(@event), method: :delete,
+                data: { confirm: t('confirm') }, class: 'ml-3 btn btn-sm btn-danger' %>
             <% end %>
           </div>
         </div>

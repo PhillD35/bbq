@@ -49,6 +49,6 @@
     <p class="lead">Удалённый аккаунт невозможно восстановить!</p>
 
       <%= button_to "Удалить аккаунт", registration_path(resource_name), class: 'btn btn-lg btn-outline-danger',
-        data: { confirm: "Вы уверены?" }, method: :delete %>
+        data: { confirm: t('confirm') }, method: :delete %>
   </div>
 </div>
