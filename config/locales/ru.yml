@@ -3,18 +3,46 @@ ru:
     models:
       user: Пользователь
       event: Событие
+      comment: Комментарий
+      subscription: Подписка
     attributes:
+      comment:
+        body: Комментарий
+        user_name: Имя
+      event:
+        title: Название
+        address: Место встречи
+        datetime: Дата и время
+        description: Описание
       user:
         email: Email
         name: Имя
         password: Пароль
         password_confirmation: Подтверждение пароля
-      event:
-        title: Название
-        address: Место проведения
-        datetime: Дата и время
-        description: Описание
+      subscription:
+        user_email: Email
+        user_name: Имя
+  app:
+    name: Шашлыки
+    company: Рога и копыта
+    other: "%{count} ошибок"
+  button:
+    sign_in: Войти!
+    sign_up: Зарегаться!
+    recover_password: Менять пароль!
+  link:
+    back: Вернуться
+    sign_in: Войди!
+    sign_up: Зарегайся!
+    recover_password: Восстанови!
+  confirm: Вы уверены?
   controllers:
+    comments:
+      create: Успех! Комментарий добавлен.
+      destroy: Коментарий успешно удалён
+    common:
+      not_allowed: Вам такого делать нельзя!
+      error: Что-то пошло не так. Ошибка.
     events:
       create: Успех! Событие создано.
       update: Успех! Событие обновлено.
@@ -22,12 +50,23 @@ ru:
     users:
       create: Успех! Пользователь создан.
       update: Успех! Профиль обновлён.
+    subscriptions:
+      create: Успех! Подписка удалась.
+      destroy: Потдписка отменена.
+  delete: Удалить
   errors:
     one: "%{count} ошибка"
     few: "%{count} ошибки"
     many: "%{count} ошибок"
-    other: "%{count} ошибок"
-  app:
-    name: Шашлыки
-    company: Рога и копыта
-  confirm: Вы уверены?
+  placeholder:
+    address: Куда идти?
+    comment: Поделись мнением со всеми!
+    email: Электронная почта
+    event: Такое описание, что б всем на зависть!
+    name: Представься!
+    password: Пароль
+    password_confirmation: Ещё раз пароль
+    password_new: Новый пароль
+    title: Кратко, но ёмко
+  unsubscribe: Отписаться
+

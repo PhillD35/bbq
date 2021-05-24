@@ -3,9 +3,9 @@
 <% if errors.any? %>
   <ul class="nav flex-column">
     <% errors.full_messages.each do |message| %>
-      <li class="alert alert-warning my-1 nav-item d-flex justify-content-between flex-fill">
+      <li class="alert alert-danger my-1 nav-item d-flex justify-content-between flex-fill">
         <span><%= message %></span>
-        <%= content_tag(:button, '×', class: 'close', data: {dismiss: 'alert'}) %>
+        <%= content_tag(:button, bi_icon('x-octagon-fill'), class: 'close text-danger', data: {dismiss: 'alert'}) %>
       </li>
     <% end %>
   </ul>

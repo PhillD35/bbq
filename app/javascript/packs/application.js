@@ -10,6 +10,7 @@ import "channels"
 import '../styles/application'
 
 import 'bootstrap/dist/js/bootstrap.js'
+import '../js/custom.js'
 
 const images = require.context('../images', true)
 

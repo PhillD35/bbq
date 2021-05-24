@@ -1,0 +1,19 @@
+<%= form_for [@event, subscription] do |f| %>
+    <%= render partial: 'partials/form_errors', locals: {model: subscription} %>
+
+    <% unless user_signed_in? %>
+        <div class="form-group my-3">
+          <%= f.label :user_name, class: 'h6' %>
+          <%= f.text_field :user_name, class: 'form-control', placeholder: t('placeholder.name') %>
+        </div>
+
+        <div class="form-group my-3">
+          <%= f.label :user_email, class: 'h6' %>
+          <%= f.text_field :user_email, class: 'form-control', placeholder: t('placeholder.email') %>
+        </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit 'Подписаться', class: 'btn btn-primary' %>
+    </div>
+<% end %>

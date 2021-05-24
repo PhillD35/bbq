@@ -5,41 +5,48 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group my-3">
         <%= f.label :email, class: 'h6' %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",
+          class: 'form-control', placeholder: t('placeholder.email') %>
       </div>
 
       <div class="form-group my-3">
         <%= f.label :password, class: 'h6' %>
-        <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+        <%= f.password_field :password, autocomplete: "current-password",
+          class: 'form-control', placeholder: t('placeholder.password') %>
       </div>
 
       <% if devise_mapping.rememberable? %>
-        <div class="input-group input-group-sm my-3 d-flex align-items-center">
-          <div class="input-group-text">
-            <%= f.check_box :remember_me, checked: true %>
-          </div>
+        <div class="custom-control custom-checkbox my-3">
+          <%= f.check_box :remember_me, checked: true, class: 'custom-control-input' %>
 
-          <%= f.label :remember_me, 'Запомни меня!', class: 'text-body ml-3' %>
+          <%= f.label :remember_me, 'Запомни меня!', class: 'custom-control-label' %>
         </div>
       <% end %>
 
       <div class="actions mt-4 d-flex justify-content-between align-items-baseline">
-        <%= f.submit "Войти!", class: 'btn btn-primary' %>
-        <%= link_to 'Вернуться', :back, class: 'btn btn-outline-dark btn-sm'%>
+        <%= f.submit t('button.sign_in'), class: 'btn btn-primary' %>
+        <%= link_to t('link.back'), :back, class: 'btn btn-outline-dark btn-sm'%>
       </div>
     <% end %>
+
+    <div class="d-sm-block d-md-none my-4">
+      <span>Забыл пароль?</span>
+      <%= link_to t('link.recover_password'), new_password_path(resource_name) %>
+    </div>
   </div>
 
   <div class="align-self-center card d-sm-none d-md-block mx-auto shadow-lg">
     <ui class="list-group list-group-flush">
       <li class="list-group-item text-center shadow">
         <p class="lead">Впервые у нас?</p>
-        <%= link_to 'Зарегайся!', new_user_registration_path, class: 'btn btn-outline-info stretched-link'%>
+        <%= link_to t('link.sign_up'), new_user_registration_path,
+          class: 'btn btn-outline-info stretched-link'%>
       </li>
 
       <li class="list-group-item text-center shadow">
         <p class="lead">Забыл пароль?</p>
-        <%= link_to 'Восстанови!', new_password_path(resource_name), class: 'btn btn-outline-info stretched-link'%>
+        <%= link_to t('link.recover_password'), new_password_path(resource_name),
+          class: 'btn btn-outline-info stretched-link'%>
       </li>
     </ui>
   </div>

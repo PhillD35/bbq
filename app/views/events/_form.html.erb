@@ -3,12 +3,14 @@
 
   <div class="form-group my-3">
     <%= field.label :title, class: 'h6' %>
-    <%= field.text_field :title, class: 'form-control' %>
+    <%= field.text_field :title, class: 'form-control',
+      placeholder: t('placeholder.title') %>
   </div>
 
   <div class="form-group my-3">
     <%= field.label :address, class: 'h6' %>
-    <%= field.text_field :address, class: 'form-control' %>
+    <%= field.text_field :address, class: 'form-control',
+      placeholder: t('placeholder.address') %>
   </div>
 
   <div class="form-group my-3">
@@ -18,7 +20,8 @@
 
   <div class="form-group my-3">
     <%= field.label :description, class: 'h6' %>
-    <%= field.text_area :description, class: 'form-control' %>
+    <%= field.text_area :description, class: 'form-control',
+      placeholder: t('placeholder.event') %>
   </div>
 
   <div class="actions d-flex justify-content-between align-items-baseline">

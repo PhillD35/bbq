@@ -6,12 +6,14 @@
 
     <div class="form-group my-3">
       <%= f.label :name, class: 'h6' %>
-      <%= f.text_field :email, autofocus: true, class: 'form-control' %>
+      <%= f.text_field :name, autofocus: true,
+        class: 'form-control', placeholder: t('placeholder.name') %>
     </div>
 
     <div class="form-group my-3">
       <%= f.label :email, class: 'h6' %>
-      <%= f.email_field :email, autocomplete: "email", class: 'form-control' %>
+      <%= f.email_field :email, autocomplete: "email",
+        class: 'form-control', placeholder: t('placeholder.email') %>
     </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -24,19 +26,19 @@
         <em class="text-secondary">(<%= @minimum_password_length %> символа минимум)</em>
       <% end %>
       <%= f.password_field :password, autocomplete: "new-password",
-        placeholder: 'это поле можно оставить пустым :)', class: 'form-control' %>
+        class: 'form-control', placeholder: t('placeholder.password_new') %>
     </div>
 
     <div class="form-group my-3">
       <%= f.label :password_confirmation, class: 'h6' %>
       <%= f.password_field :password_confirmation, autocomplete: "new-password",
-        placeholder: 'то же, что и с паролем :)', class: 'form-control' %>
+        class: 'form-control', placeholder: t('placeholder.password_confirmation') %>
     </div>
 
-    <div class="form-group my-3">
+    <div class="form-group my-5">
       <%= f.label :current_password, class: 'h6' %>
       <%= f.password_field :current_password, autocomplete: "current-password",
-        placeholder: 'любые изменения необходимо подтвердить', class: 'form-control' %>
+        class: 'form-control', placeholder: t('placeholder.password') %>
     </div>
 
     <div class="actions mt-4 d-flex justify-content-between align-items-baseline">
