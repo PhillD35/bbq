@@ -1,10 +1,5 @@
 ru:
   activerecord:
-    models:
-      user: Пользователь
-      event: Событие
-      comment: Комментарий
-      subscription: Подписка
     attributes:
       comment:
         body: Комментарий
@@ -22,6 +17,14 @@ ru:
       subscription:
         user_email: Email
         user_name: Имя
+    errors:
+      messages:
+        exclusion: уже занят зарегестрированным пользователем
+    models:
+      user: Пользователь
+      event: Событие
+      comment: Комментарий
+      subscription: Подписка
   app:
     name: Шашлыки
     company: Рога и копыта
