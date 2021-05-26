@@ -6,10 +6,12 @@ class SubscriptionsController < ApplicationController
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
 
-    if @new_subscription.save
+    if current_user == @event.user
+      redirect_to @event, alert: I18n.t('controllers.general.not_allowed')
+    elsif @new_subscription.save
       redirect_to @event, notice: I18n.t('controllers.subscriptions.create')
     else
-      render 'events/show', alert: I18n.t('controllers.common.error')
+      render 'events/show', alert: I18n.t('controllers.general.error')
     end
   end
 
@@ -18,7 +20,7 @@ class SubscriptionsController < ApplicationController
       @subscription.destroy
       redirect_to @event, notice: I18n.t('controllers.subscriptions.destroy')
     else
-      redirect_to @event, alert: I18n.t('controllers.common.not_allowed')
+      redirect_to @event, alert: I18n.t('controllers.general.not_allowed')
     end
   end
 

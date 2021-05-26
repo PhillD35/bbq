@@ -10,7 +10,7 @@
             <h1><%= @event.title %></h1>
             <h5><%= l @event.datetime, format: :short %></h5>
             <h4><small><%= link_to @event.address,
-                "https://yandex.ru/maps/?text=#{@event.address}" %></small></h4>
+                "https://yandex.ru/maps/?text=#{@event.address}", target: :blank %></small></h4>
             <p><%= @event.description %></p>
           </div>
 
@@ -57,14 +57,16 @@
         </div>
       </div>
 
-      <div class="event-subscription-form my-4">
-        <h4>Я пойду:</h4>
-        <div>
-          <%= render partial: 'subscriptions/form', locals: {
-            subscription: @new_subscription || @event.subscriptions.build
-          } %>
+      <% unless @event.user == current_user %>
+        <div class="event-subscription-form my-4">
+          <h4>Я пойду:</h4>
+          <div>
+            <%= render partial: 'subscriptions/form', locals: {
+              subscription: @new_subscription || @event.subscriptions.build
+            } %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

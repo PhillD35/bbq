@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if @new_comment.save
       redirect_to @event, notice: I18n.t('controllers.comments.create')
     else
-      render 'events/show', alert: I18n.t('controllers.common.error')
+      render 'events/show', alert: I18n.t('controllers.general.error')
     end
   end
 
@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
 
       redirect_to @event, notice: I18n.t('controllers.comments.destroy')
     else
-      redirect_to @event, alert: I18n.t('controllers.common.not_allowed')
+      redirect_to @event, alert: I18n.t('controllers.general.not_allowed')
     end
   end
 
