@@ -19,7 +19,7 @@ ru:
         user_name: Имя
     errors:
       messages:
-        exclusion: уже занят зарегестрированным пользователем
+        email_taken: уже занят зарегестрированным пользователем
     models:
       user: Пользователь
       event: Событие
@@ -65,11 +65,12 @@ ru:
     address: Куда идти?
     comment: Поделись мнением со всеми!
     email: Электронная почта
-    event: Такое описание, что б всем на зависть!
+    event: Такое описание, чтоб всем на зависть!
     name: Представься!
     password: Пароль
     password_confirmation: Ещё раз пароль
     password_new: Новый пароль
     title: Кратко, но ёмко
+    remember_me: Запомни меня!
   unsubscribe: Отписаться
 

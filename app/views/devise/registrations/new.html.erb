@@ -4,18 +4,19 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="form-group my-3">
+      <div class="form-group">
+        <%= f.label :name, class: 'h6' %>
+        <%= f.text_field :name, autofocus: true,
+          class: 'form-control', placeholder: t('placeholder.name') %>
+      </div>
+
+      <div class="form-group">
         <%= f.label :email, class: 'h6' %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email",
+        <%= f.email_field :email, autocomplete: "email",
           class: 'form-control', placeholder: t('placeholder.email') %>
       </div>
 
-      <div class="form-group my-3">
-        <%= f.label :name, class: 'h6' %>
-        <%= f.text_field :name, class: 'form-control', placeholder: t('placeholder.name') %>
-      </div>
-
-      <div class="form-group my-3">
+      <div class="form-group">
         <%= f.label :password, class: 'h6' %>
         <% if @minimum_password_length %>
           <em class="text-secondary">(<%= @minimum_password_length %> символа минимум)</em>
@@ -24,7 +25,7 @@
           class: 'form-control', placeholder: t('placeholder.password') %>
       </div>
 
-      <div class="form-group my-3">
+      <div class="form-group">
         <%= f.label :password_confirmation, class: 'h6' %>
         <%= f.password_field :password_confirmation, autocomplete: "new-password",
           class: 'form-control', placeholder: t('placeholder.password_confirmation') %>

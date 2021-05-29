@@ -12,7 +12,7 @@ gem 'devise-i18n'
 gem 'rails-i18n'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
   gem 'sqlite3', '~> 1.4'
 end
 

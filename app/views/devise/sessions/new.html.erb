@@ -1,25 +1,23 @@
 <div class="row">
   <div class="col-md-6">
     <h2 class="mt-1 mb-4">Войти</h2>
-
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-group my-3">
+      <div class="form-group">
         <%= f.label :email, class: 'h6' %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email",
           class: 'form-control', placeholder: t('placeholder.email') %>
       </div>
 
-      <div class="form-group my-3">
+      <div class="form-group">
         <%= f.label :password, class: 'h6' %>
         <%= f.password_field :password, autocomplete: "current-password",
           class: 'form-control', placeholder: t('placeholder.password') %>
       </div>
 
       <% if devise_mapping.rememberable? %>
-        <div class="custom-control custom-checkbox my-3">
+        <div class="custom-control custom-checkbox">
           <%= f.check_box :remember_me, checked: true, class: 'custom-control-input' %>
-
-          <%= f.label :remember_me, 'Запомни меня!', class: 'custom-control-label' %>
+          <%= f.label :remember_me, t('placeholder.remember_me'), class: 'custom-control-label' %>
         </div>
       <% end %>
 

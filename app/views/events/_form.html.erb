@@ -1,24 +1,24 @@
 <%= form_for(@event) do |field| %>
   <%= render partial: 'partials/form_errors', locals: {model: @event} %>
 
-  <div class="form-group my-3">
+  <div class="form-group">
     <%= field.label :title, class: 'h6' %>
     <%= field.text_field :title, class: 'form-control',
       placeholder: t('placeholder.title') %>
   </div>
 
-  <div class="form-group my-3">
+  <div class="form-group">
     <%= field.label :address, class: 'h6' %>
     <%= field.text_field :address, class: 'form-control',
       placeholder: t('placeholder.address') %>
   </div>
 
-  <div class="form-group my-3">
+  <div class="form-group">
     <%= field.label :datetime, class: 'h6' %>
     <p><%= field.datetime_select :datetime, class: 'form-control' %></p>
   </div>
 
-  <div class="form-group my-3">
+  <div class="form-group">
     <%= field.label :description, class: 'h6' %>
     <%= field.text_area :description, class: 'form-control',
       placeholder: t('placeholder.event') %>
