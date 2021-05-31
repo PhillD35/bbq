@@ -1,0 +1,62 @@
+# id: nil,
+# body: nil,
+# user_name: nil,
+# event_id: nil,
+# user_id: nil,
+# created_at: nil,
+# updated_at: nil
+
+DEFAULTS: &DEFAULTS
+  body: Here's some test text. Good day to you, friend!
+  event_id: 1
+
+one:
+  <<: *DEFAULTS
+  user_id: 1
+two:
+  <<: *DEFAULTS
+  user_id: 2
+three:
+  <<: *DEFAULTS
+  user_id: 3
+four:
+  <<: *DEFAULTS
+  user_id: 4
+eins:
+  <<: *DEFAULTS
+  user_name: test_$LABEL
+zwei:
+  <<: *DEFAULTS
+  user_name: test_$LABEL
+drei:
+  <<: *DEFAULTS
+  user_name: test_$LABEL
+vier:
+  <<: *DEFAULTS
+  user_name: test_$LABEL
+
+five:
+  <<: *DEFAULTS
+  event_id: 6
+  user_id: 5
+six:
+  <<: *DEFAULTS
+  event_id: 6
+  user_id: 5
+seven:
+  <<: *DEFAULTS
+  event_id: 6
+  user_id: 5
+
+fünf:
+  <<: *DEFAULTS
+  user_name: test_$LABEL
+  event_id: 6
+sechs:
+  <<: *DEFAULTS
+  user_name: test_$LABEL
+  event_id: 6
+sieben:
+  <<: *DEFAULTS
+  user_name: test_$LABEL
+  event_id: 6

@@ -1,0 +1,33 @@
+# "id"=>nil,
+# "name"=>nil,
+# "email"=>"",
+# "created_at"=>nil,
+# "updated_at"=>nil,
+# "encrypted_password"=>"",
+# "reset_password_token"=>nil,
+# "reset_password_sent_at"=>nil,
+# "remember_created_at"=>nil
+
+DEFAULTS: &DEFAULTS
+  name: $LABEL
+  email: $LABEL@mail.ru
+
+test_one:
+  <<: *DEFAULTS
+  id: 1
+
+test_two:
+  <<: *DEFAULTS
+  id: 2
+
+test_three:
+  <<: *DEFAULTS
+  id: 3
+
+test_four:
+  <<: *DEFAULTS
+  id: 4
+
+test_five:
+  <<: *DEFAULTS
+  id: 5

@@ -1,0 +1,69 @@
+# id: nil,
+# title: nil,
+# description: nil,
+# address: nil,
+# datetime: nil,
+# created_at: nil,
+# updated_at: nil,
+# user_id: nil
+
+DEFAULTS: &DEFAULTS
+  address: Moscow
+  datetime: 'Tue, 04 May 2021 14:32:00.000000000 UTC +00:00'
+  description: Just a reasonably long test message.
+  title: test_$LABEL
+  user_id: 1
+
+one:
+  <<: *DEFAULTS
+  address: test_one's house
+  id: 1
+two:
+  <<: *DEFAULTS
+  address: test_one's house
+  id: 2
+three:
+  <<: *DEFAULTS
+  address: test_one's house
+  id: 3
+four:
+  <<: *DEFAULTS
+  address: test_one's house
+  id: 4
+five:
+  <<: *DEFAULTS
+  address: test_one's house
+  id: 5
+
+six:
+  <<: *DEFAULTS
+  address: test_two's house
+  id: 6
+  user_id: 2
+seven:
+  <<: *DEFAULTS
+  address: test_two's house
+  id: 7
+  user_id: 2
+eight:
+  <<: *DEFAULTS
+  address: test_two's house
+  id: 8
+  user_id: 2
+
+nine:
+  <<: *DEFAULTS
+  address: test_three's house
+  id: 9
+  user_id: 3
+ten:
+  <<: *DEFAULTS
+  address: test_three's house
+  id: 10
+  user_id: 3
+
+eleven:
+  <<: *DEFAULTS
+  address: test_four's house
+  id: 11
+  user_id: 4
